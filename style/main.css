@@ -7,6 +7,26 @@ body {
   margin: 0;
 }
 
+#countdown {
+    position: fixed;
+    top: 50%; /* Posisikan 50% dari atas halaman */
+    left: 50%; /* Posisikan 50% dari kiri halaman */
+    transform: translate(-50%, -50%); /* Geser elemen ke tengah dengan transformasi */
+    font-size: 35px; /* Atur ukuran font */
+    background-color: rgba(0, 0, 0, 0.1); /* Opsional: latar belakang transparan */
+    padding: 10px;
+    border-radius: 8px;
+    color: black; /* Warna teks */
+}
+
+#countdown::after {
+    content: "Tunggu yang sabar ya cantik. ❤️"; /* Teks tambahan */
+    display: block;
+    margin-top: 10px; /* Jarak antara countdown dan teks */
+    font-size: 25px; /* Ukuran font teks tambahan */
+    color: black; /* Warna teks */
+}
+
 .song {
   visibility: hidden;
 }
@@ -225,6 +245,11 @@ body {
   z-index: 3;
 }
 
+.image-one {
+    max-width: 35%; /* Membuat gambar responsif */
+}
+
+
 /* Media Queries */
 @media screen and (max-height: 1000px) {
   .six .hat {
@@ -260,8 +285,10 @@ body {
   }
 
   .text-box .fake-btn {
-    bottom: -38px;
-    right: 5px;
+    display: none;
+    /*bottom: -38px;*/
+    /*right: 5px;*/
+    /*margin-top: -30px;*/
   }
 
   .idea-5 span {
@@ -288,5 +315,9 @@ body {
   .nine p {
     font-size: 1.5rem;
     font-weight: lighter;
+  }
+
+  .image-one{
+    display: block;
   }
 }
